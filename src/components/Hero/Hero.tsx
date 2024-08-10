@@ -1,5 +1,5 @@
 import "./styles.css";
-import { ModeThemeProps } from "../../models/ModeThemeProps";
+import { ModeThemeProps } from "../../models/ModeThemeProps.interface";
 
 import darkFacebook from "../../assets/facebook-dark.png";
 import lightFacebook from "../../assets/facebook-light.png";

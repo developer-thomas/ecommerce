@@ -9,7 +9,7 @@ import sunIcon from "../../assets/sun.png";
 import moonIcon from "../../assets/moon.png";
 import blackToggle from "../../assets/toggle-dark.png";
 import lightToggle from "../../assets/toggle-light.png";
-import { ModeThemeProps } from "../../models/ModeThemeProps";
+import { ModeThemeProps } from "../../models/ModeThemeProps.interface";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ mode, setMode }: ModeThemeProps) => {

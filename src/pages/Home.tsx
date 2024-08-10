@@ -1,10 +1,12 @@
 import Hero from "../components/Hero/Hero";
-import { ModeThemeProps } from "../models/ModeThemeProps";
+import Popular from "../components/Popular/Popular";
+import { ModeThemeProps } from "../models/ModeThemeProps.interface";
 
 const Home = ({ mode, setMode }: ModeThemeProps) => {
   return (
     <>
       <Hero mode={mode} setMode={setMode}></Hero>
+      <Popular></Popular>
     </>
   );
 };
