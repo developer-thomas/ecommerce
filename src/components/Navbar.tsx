@@ -10,6 +10,7 @@ import moonIcon from "../assets/moon.png";
 import blackToggle from "../assets/toggle-dark.png";
 import lightToggle from "../assets/toggle-light.png";
 import { ModeThemeProps } from "../models/ModeThemeProps";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ mode, setMode }: ModeThemeProps) => {
   // menu hook mostra ao usuário onde ele clicou/está
@@ -29,7 +30,7 @@ const Navbar = ({ mode, setMode }: ModeThemeProps) => {
 
   return (
     <nav>
-      <a href="#" className="logo">
+      <a href="/" className="logo">
         <img src={logo} alt="watch image logo" />
       </a>
       <img id="bars" onClick={toggler} src={mode === "light" ? blackToggle : lightToggle} alt="toggle icon" />
@@ -37,21 +38,31 @@ const Navbar = ({ mode, setMode }: ModeThemeProps) => {
         <div className={showMenu === "show" ? "navbars show" : "navbars"}>
           <div className="links">
             <ul>
-              <li onClick={() => setMenu("home")}>Home{menu === "home" && <hr></hr>}</li>
-              <li onClick={() => setMenu("men")}>Men{menu === "men" && <hr></hr>}</li>
-              <li onClick={() => setMenu("women")}>Women{menu === "women" && <hr></hr>}</li>
-              <li onClick={() => setMenu("contact")}>Contact{menu === "contact" && <hr></hr>}</li>
+              <Link to="/">
+                <li onClick={() => setMenu("home")}>Home{menu === "home" && <hr></hr>}</li>
+              </Link>
+              <Link to="/men">
+                <li onClick={() => setMenu("men")}>Men{menu === "men" && <hr></hr>}</li>
+              </Link>
+              <Link to="women">
+                <li onClick={() => setMenu("women")}>Women{menu === "women" && <hr></hr>}</li>
+              </Link>
+              <Link to="contact">
+                <li onClick={() => setMenu("contact")}>Contact{menu === "contact" && <hr></hr>}</li>
+              </Link>
             </ul>
           </div>
         </div>
       </div>
       <div>
-        <img
-          className="img"
-          onClick={() => setMenu("")}
-          src={mode === "light" ? darkUser : lightUser}
-          alt="user login icon"
-        />
+        <Link to="/login">
+          <img
+            className="img"
+            onClick={() => setMenu("")}
+            src={mode === "light" ? darkUser : lightUser}
+            alt="user login icon"
+          />
+        </Link>
         <img
           className="img"
           onClick={changeTheme}
@@ -59,12 +70,14 @@ const Navbar = ({ mode, setMode }: ModeThemeProps) => {
           alt="change mode color icon"
         />
         <span className="crt">
-          <img
-            className="img cart"
-            onClick={() => setMenu("")}
-            src={mode === "light" ? darkCart : lightCart}
-            alt="user cart icon"
-          />
+          <Link to="/cart">
+            <img
+              className="img cart"
+              onClick={() => setMenu("")}
+              src={mode === "light" ? darkCart : lightCart}
+              alt="user cart icon"
+            />
+          </Link>
           <div className="crt-bt"></div>
         </span>
       </div>
