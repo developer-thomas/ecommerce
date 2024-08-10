@@ -14,7 +14,7 @@ body {
 .container {
   background: #fafdff;
   width: 100%;
-  min-height: 1000vh;
+  min-height: 100vh;
   transform: 0.4s ease;
 }
 

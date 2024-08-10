@@ -1,15 +1,15 @@
 import "./Navbar.css";
 import { useState } from "react";
-import logo from "../assets/logo.png";
-import darkUser from "../assets/dark-user.png";
-import lightUser from "../assets/light-user.png";
-import darkCart from "../assets/dark-cart.png";
-import lightCart from "../assets/light-cart.png";
-import sunIcon from "../assets/sun.png";
-import moonIcon from "../assets/moon.png";
-import blackToggle from "../assets/toggle-dark.png";
-import lightToggle from "../assets/toggle-light.png";
-import { ModeThemeProps } from "../models/ModeThemeProps";
+import logo from "../../assets/logo.png";
+import darkUser from "../../assets/dark-user.png";
+import lightUser from "../../assets/light-user.png";
+import darkCart from "../../assets/dark-cart.png";
+import lightCart from "../../assets/light-cart.png";
+import sunIcon from "../../assets/sun.png";
+import moonIcon from "../../assets/moon.png";
+import blackToggle from "../../assets/toggle-dark.png";
+import lightToggle from "../../assets/toggle-light.png";
+import { ModeThemeProps } from "../../models/ModeThemeProps";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ mode, setMode }: ModeThemeProps) => {

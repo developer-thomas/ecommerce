@@ -1,4 +1,4 @@
-const Category = () => {
+const Category = ({ category }) => {
   return <></>;
 };
 
